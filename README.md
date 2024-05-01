@@ -9,6 +9,21 @@ This script is not fool-proof. You will need to manually run it at given interva
 
 
 
+## Table of Contents
+1. [User guide](#user-guide)
+   1. [Importing the calendar from CalMoodle](#importing-the-calendar-from-calmoodle)
+      1. [Getting the calendar from Moodle](#getting-the-calendar-from-moodle)
+      2. [Importing the CalMoodle calendar into Outlook](#importing-the-calmoodle-calendar-into-outlook)
+   2. [Preparing Outlook for scripts](#preparing-outlook-for-scripts)
+      1. [Activating developer mode](#activating-developer-mode)
+      2. [Adding modules](#adding-modules)
+   3. [Adding the scripts to Visual Basic modules](#adding-the-scripts-to-visual-basic-modules)
+   4. [Running scripts](#running-scripts)
+      1. [Finding the correct paths](#finding-the-correct-paths)
+      2. [Modifying "Module 2"](#modifying-module-2)
+      3. [Running the last script](#running-the-last-script)
+   5. [For future use](#for-future-use)
+
 ## User guide
 
 Below you will find a general user guide for automating calendar synchronization. The guide has been split into different sections to ensure a somewhat smooth setup process. Be advised, that after this has been done once, running the script in the future requires only two clicks with the mouse. It is only the first-time setup that can be a little daunting.
