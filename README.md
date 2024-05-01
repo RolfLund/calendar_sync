@@ -69,7 +69,7 @@ Outlook is now ready to add the scripts.
 
 In Outlook, click on the new menu "Developer" or "Udvikler" and click "Visual Basic":
 
-![Outlook open VBA](img/outlook_VBA.JPG)
+![Outlook open VBA](img/outlook_vba.JPG)
 
 This opens a new window called "Windows Visual Basic for Applications". This is where we add our scripts in a little while. First, we prepare the correct modules. Be aware, that below screenshots show the names I have given my elements. The names does not matter one bit. You don't have to give them new names and names like "Module 1" and "Module 2" is just fine. The functionality is EXACTLY the same. Now, in the newly opened window, you have a rather empty, white pane to the left. Right-click anywhere in the empty, white space to the left, navigate to "Insert" and click "Module":
 
@@ -86,6 +86,44 @@ Now we are ready to add the actual scripts and get the ball rolling. Keep "Micro
 First, you should navigate to [this link](https://github.com/RolfLund/calendar_sync/tree/main/VBA) and click on the "check_paths.bas"-link. This opens code but you can just click on the small icon towards the top with two squares - this copies the code:
 
 ![Copy GIT code](img/github_copy_code.JPG)
+
+Now navigate to the "Microsoft Visual Basic for Applications" and double-click "Module 1" (I have named my Module 1 "Path-check" but please ignore this). This opens up an empty editor where you can paste the code you have coped from "check_paths.bas". Now, please don't run the code (by clicking the small, green arrow in the top) just yet:
+
+![Add code to VBA](img/vba_add_code.JPG)
+
+The editor will remember the code pasted here so you do not have to worry about saving constantly. Once the code has been added, go back to [this link](https://github.com/RolfLund/calendar_sync/tree/main/VBA) and open the other file called "cal_sync.bas", copy that code as above, go back to "Microsoft Visual Basic for Applications" and paste this code into "Module 2". Now, you should have a shorter code in module 1 and a longer code in module 2.
+
+Now we are ready to actually do some things. 
+
+### Running scripts
+
+For this final step, we are only working in "Microsoft Visual Basic for Applications".
+
+#### Finding the correct paths
+
+First, we have to run the code we saved in "Module 1". Double-click "Module 1" (the one with the short code) and click the small, green arrow (it might appear as if nothing is happening, but there is - you don't have to click a million times... well, you can if you want to, but it would be a waste of time):
+
+![Run module 1](img/Module_1.JPG)
+
+To see the output of this script, we need to open something called the "Immediate Window". Click on the "View"-menu and click on "Immediate Window":
+
+![Immediate Window](img/immediate_window.png)
+
+This opens up the "Immediate Window" below the open code. You might have to drag the window a little larger to see what is going on. We need to find two pieces of information in the output presented in the "Immediate Window" that should be pasted into the script in "Module 2". You are looking for the following information:
+
+1. The name of the internet calendars. Most of the time, outlook follows windows main language and will simply name this "Internet calendars" or "Internetkalendere" but please make sure. When you have this information, then look at the name presented under that account. If you named your teaching calendar "Teaching" or "Undervisning" this should show up here like so:
+
+   ![Paths](img/paths.JPG)
+
+2. Next, you are looking for the name of the calendar in your main account. Please observe that I am looking only at the folders below my main AAU-account (rolfll@socsci.aau.dk) This should look something like this (same output):
+
+![More paths](img/paths_1.JPG)
+
+Now, we have all the information we need to modify our last script and finally synchronize our calendars for good.
+
+#### Modifying "Module 2"
+
+
 
 
 
