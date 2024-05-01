@@ -123,7 +123,29 @@ Now, we have all the information we need to modify our last script and finally s
 
 #### Modifying "Module 2"
 
+In my example, my internet calendar account is called "Internetkalendere" and the folder there is called "Undervisning". My main account is my e-mail and the folder name for my calendar is "Kalender". This is all I need to make the last modification. In "Microsoft Visual Basic for Applications", double click the other module "Module 2" (with the longer code) and before running anything, modify these lines:
 
+```vb
+Set srcCalendar = Outlook.Session.Folders("ADD_NAME_INTERNET_CALENDAR").Folders("ADD_NAME_INTERNET_FOLDER")
+Set destCalendar = Outlook.Session.Folders("ADD_E-MAIL_HERE").Folders("ADD_NAME_OF_YOUR_MAIN_CALENDAR_HERE")
+```
 
+In my case, this would amount to:
 
+``` vb
+Set srcCalendar = Outlook.Session.Folders("Internetkalendere").Folders("Undervisning")
+Set destCalendar = Outlook.Session.Folders("rolfll@socsci.aau.dk").Folders("Kalender")
+```
+
+When all of this is done, you can click on "save" here:
+
+![Save modules](img/save.JPG)
+
+#### Running the last script
+
+When this is all done, you can now press the small green arrow again while "Module 2" is open. This will take a little time the first time the script runs - please be patient. If it takes longer than a few minutes... then probably wait a little longer. Nothing will break or be deleted if this does not work. When it is done, you can close "Microsoft Visual Basic for Applications" and admire a calendar that is perfectly synced with CalMoodle and even includes what room/auditorium you are teaching in or other important comments.
+
+### For future use
+
+After this initial setup, it is amazingly simple to run the script again. You simply go to the "Developer" or "Udvikler" tab, click "Visual Basic", double click "Module 2" and press the small, green arrow. This updates your entire calendar and makes sure that things that have been moved are moved in your calendar as well.
 

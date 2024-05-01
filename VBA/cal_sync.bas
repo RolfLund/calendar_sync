@@ -7,8 +7,8 @@ Sub SyncCalendars()
     Dim itemExists As Boolean
     Dim i As Integer
 
-    Set srcCalendar = Outlook.Session.Folders("Internet Calendars").Folders("Undervisning")
-    Set destCalendar = Outlook.Session.Folders("rolfll@socsci.aau.dk").Folders("Kalender")
+    Set srcCalendar = Outlook.Session.Folders("ADD_NAME_OF_INTERNET_CALENDARS_HERE").Folders("ADD_NAME_OF_INTERNET_FOLDER_HERE")
+    Set destCalendar = Outlook.Session.Folders("ADD_YOUR_E-MAIL_HERE").Folders("ADD_THE_NAME_OF_YOUR_MAIN_CALENDAR_HERE")
     Set destItems = destCalendar.Items
 
     For Each srcItem In srcCalendar.Items
@@ -16,7 +16,7 @@ Sub SyncCalendars()
 
         For i = destItems.Count To 1 Step -1
             Set destItem = destItems.Item(i)
-            If destItem.Subject = srcItem.Subject Then ' Matching only by title
+            If destItem.Subject = srcItem.Subject Then
                 With destItem
                     .Start = srcItem.Start
                     .End = srcItem.End
