@@ -7,7 +7,7 @@ This is a workaround for the problem with having a teaching calendar running fro
 
 This script is not fool-proof. You will need to manually run it at given intervals because it does not auto-run at CalMoodle changes. Due to AAU security policies, automation has proved difficult but will hopefully be added in the future.
 
-
+There are very few known issues with this script. Only known issue is in the event that a lecture changes name after it has been imported from CalMoodle to your calendar. Since the script matches calendar events by name, the script cannot find and old lecture based on name, if the name of the lecture has changed. Thus, you could potentially have a duplicate in your calendar. This is, however, extremely unlikely and, worst case, you have to manually delete the old lecture. The new lecture will still be copied to your calendar with the correct date/time and location.
 
 ## Table of Contents
 1. [User guide](#user-guide)
